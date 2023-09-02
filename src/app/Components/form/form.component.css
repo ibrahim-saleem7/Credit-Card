@@ -1,0 +1,29 @@
+.box-form{
+    width: 600px;
+    background: white;
+    margin: auto;
+    height: 400px;
+
+}
+label{
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+form{
+    width: 500px;
+    margin: auto;
+    padding-top: 85px;
+}
+
+select{
+    width: 48%;
+}
+
+.CVV{
+    margin-left: 15px;
+}
+
+.fleid{
+    margin: 20px 0 ;
+}

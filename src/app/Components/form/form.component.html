@@ -1,0 +1,37 @@
+<div >
+  <div class="box-form rounded-3 shadow ">
+    <form [formGroup]="cardForm" >
+      
+      <div class="fleid">
+        <label for=">Card Number" class="form-label">Card Number</label>
+        <input type="text" class="form-control" id=">Card Number" formControlName="cardNum" maxlength="16"  (keyup)="sendData()">
+      </div>
+      <div class="fleid">
+        <label for="Full Name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="Full Name" formControlName="fullName" maxlength="25" (keyup)="sendData()" >
+      </div>
+      <div class="fleid d-flex justify-content-between">
+        <div class="d-flex justify-content-between flex-wrap w-75">
+          <label for="Expiration" class="form-label w-100">Expiration</label>
+          <select name="expiration-month" class="form-select" aria-label="Default select example" formControlName="expMonth" (change)="sendData()">
+            <option selected> </option>
+            <option disabled>Month </option>
+            <option *ngFor="let month of months" [value]=month >{{month}}</option>
+          </select>
+          <select name="expiration-year" class="form-select" aria-label="Default select example" formControlName="expYear" (change)="sendData()">
+            <option selected> </option>
+            <option disabled>Year </option>
+            <option *ngFor="let year of years" [value]=year>{{year}}</option>
+
+          </select>
+        </div>
+        <div class="CVV w-25">
+          <label for="CVV" class="form-label">CVV</label>
+          <input type="text" class="form-control" id="CVV" formControlName="cvv" maxlength="3" (keyup)="sendData()">
+        </div>
+        
+      </div>
+
+    </form>
+  </div>
+</div>
